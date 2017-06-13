@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
-a {
-  color: #00B7FF;
+.starter-template {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+nav {
+  margin-bottom: 2rem;
 }

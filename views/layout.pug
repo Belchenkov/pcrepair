@@ -2,6 +2,36 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+
+   nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+    button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    a.navbar-brand(href='#') PC Repair
+    #navbarsExampleDefault.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li(class=title=='Home' ? 'active' : undefined ).nav-item
+          a.nav-link(href='/')
+            | Home 
+            span.sr-only (current)
+        li(class=title=='About' ? 'active' : undefined ).nav-item
+          a.nav-link(href='/about')
+            | About 
+            span.sr-only (current)
+        li(class=title=='Services' ? 'active' : undefined ).nav-item
+          a.nav-link(href='/services')
+            | Services 
+            span.sr-only (current)
+        li(class=title=='Contact' ? 'active' : undefined ).nav-item
+          a.nav-link(href='/contact')
+            | Contact 
+            span.sr-only (current)
+        
+  block content
+
+  hr
+  .container
+    footer
+      p PC Repair &copy; 2017
