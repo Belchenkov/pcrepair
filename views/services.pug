@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div.container
+        h1.he 
+            | Services
+
+        each service, i in services
+            div.card
+                h3.card-header #{service.name}
+                div.card-block
+                    p.card-title #{service.description}
+                    p.card-text
+                        | Price Range: #{service.price_range}
+                    a.btn.btn-outline-info 
+                      |Read More
